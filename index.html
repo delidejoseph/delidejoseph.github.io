@@ -39,10 +39,13 @@
   a:focus-visible { outline: 2px solid var(--wheat); outline-offset: 2px; }
 
   /* ---------- Top nav ---------- */
-  header {
+ header {
     padding: 1.25rem 0;
     border-bottom: 1px solid var(--hairline);
     background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
   .header-inner {
     max-width: 68rem; margin: 0 auto; padding: 0 1.5rem;

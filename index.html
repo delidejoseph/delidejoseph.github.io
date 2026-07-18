@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delide "Delly" Joseph — Agricultural Economist</title>
+<meta name="description" content="Delide Joseph is a PhD candidate in Agricultural Economics at Kansas State University studying farm financial performance, conservation practice economics, agricultural policy, and precision agriculture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FDFCFA;
+    --ink: #23201C;
+    --ink-soft: #55504A;
+    --purple: #5B2D8E;      /* K-State + deck primary */
+    --purple-deep: #40206B;
+    --wheat: #C9A227;       /* Kansas wheat gold */
+    --hairline: #E5E1DA;
+    --topsoil: #3E3128;     /* soil horizon strip */
+    --subsoil: #6B5138;
+    --parent: #A08560;
+    --max: 46rem;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", -apple-system, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--purple); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .15s; }
+  a:hover, a:focus-visible { border-bottom-color: var(--purple); }
+  a:focus-visible { outline: 2px solid var(--wheat); outline-offset: 2px; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .header-inner { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .75rem; }
+  .wordmark { font-family: "Spectral", serif; font-weight: 600; font-size: 1.15rem; color: var(--ink); border: none; }
+  nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  nav a {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .78rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  nav a:hover { color: var(--purple); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 4.5rem 0 3.5rem; }
+  .hero-grid { display: flex; gap: 2.5rem; align-items: flex-start; }
+  .hero-text { flex: 1; }
+  .headshot {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--purple);
+    flex-shrink: 0;
+  }
+  @media (max-width: 40rem) {
+    .hero-grid { flex-direction: column-reverse; }
+    .headshot { width: 110px; height: 110px; }
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--purple);
+    display: block;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: "Spectral", serif;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 5.5vw, 3.1rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.4rem;
+  }
+  h1 .accent { color: var(--purple); }
+  .hero p.lede {
+    font-size: 1.18rem;
+    color: var(--ink-soft);
+    max-width: 38rem;
+  }
+  .hero-links { margin-top: 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-links a {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .82rem;
+    letter-spacing: .04em;
+  }
+
+  /* ---------- Soil horizon strip (signature) ---------- */
+  .horizon {
+    height: 14px;
+    display: grid;
+    grid-template-rows: 5px 5px 4px;
+  }
+  .horizon span:nth-child(1) { background: var(--topsoil); }
+  .horizon span:nth-child(2) { background: var(--subsoil); }
+  .horizon span:nth-child(3) { background: var(--parent); }
+  .horizon-caption {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .68rem;
+    color: var(--ink-soft);
+    letter-spacing: .05em;
+    padding-top: .45rem;
+    text-align: right;
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: 3.5rem 0; border-bottom: 1px solid var(--hairline); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-family: "Spectral", serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-bottom: 1.6rem;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    width: 2.2rem;
+    height: 3px;
+    background: var(--wheat);
+    margin-top: .55rem;
+  }
+  h3.subhead {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin: 2.2rem 0 .6rem;
+  }
+  h3.subhead:first-of-type { margin-top: .4rem; }
+  section p + p { margin-top: 1rem; }
+
+  /* ---------- Research entries ---------- */
+  .entry { padding: 1.4rem 0; border-top: 1px solid var(--hairline); }
+  .entry-tag {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--wheat);
+    font-weight: 500;
+    display: block;
+    margin-bottom: .35rem;
+  }
+  .entry h3 {
+    font-family: "Spectral", serif;
+    font-weight: 600;
+    font-size: 1.22rem;
+    line-height: 1.35;
+    margin-bottom: .45rem;
+  }
+  .entry .meta { font-size: .92rem; color: var(--ink-soft); margin-bottom: .55rem; }
+  .entry p.desc { font-size: .98rem; color: var(--ink); }
+  .finding {
+    margin-top: .7rem;
+    padding-left: .9rem;
+    border-left: 3px solid var(--purple);
+    font-size: .95rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  /* ---------- Publications list ---------- */
+  .pub { padding: .85rem 0; border-top: 1px solid var(--hairline); font-size: .98rem; }
+  .pub:first-of-type { border-top: none; }
+  .pub .authors { color: var(--ink-soft); }
+  .pub .authors strong { color: var(--ink); font-weight: 600; }
+  .pub .title { font-family: "Spectral", serif; font-weight: 600; }
+  .pub .venue { font-style: italic; color: var(--ink-soft); }
+  .pub .year {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .78rem;
+    color: var(--wheat);
+    font-weight: 500;
+  }
+
+  /* ---------- Interests grid ---------- */
+  .interests { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .9rem; margin-top: .5rem; }
+  .interest {
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--purple);
+    padding: .9rem 1rem;
+    background: #fff;
+  }
+  .interest strong { font-family: "Spectral", serif; font-weight: 600; display: block; margin-bottom: .25rem; }
+  .interest span { font-size: .9rem; color: var(--ink-soft); }
+
+  /* ---------- Writing / Substack ---------- */
+  .writing-card {
+    background: #fff;
+    border: 1px solid var(--hairline);
+    padding: 1.5rem;
+    margin-top: .5rem;
+  }
+  .writing-card h3 { font-family: "Spectral", serif; font-size: 1.25rem; margin-bottom: .5rem; }
+
+  /* ---------- Footer ---------- */
+  footer { padding: 2.5rem 0 3rem; color: var(--ink-soft); font-size: .9rem; }
+  footer .foot-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--purple); }
+
+  ul.plain { list-style: none; }
+  ul.plain li { padding: .35rem 0; }
+  ul.plain li::before { content: "—"; color: var(--wheat); margin-right: .6rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top">Delide Joseph</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#extension">Extension</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Agricultural Economics · Kansas State University</span>
+        <h1>Studying the economics of <span class="accent">healthy soil</span> and resilient farm finances.</h1>
+        <p class="lede">I'm Delly — a PhD candidate in Agricultural Economics at Kansas State University working on agricultural policy, production economics, and agribusiness. I use farm-level panel data and precision agriculture records to ask when conservation pays, how farms absorb financial shocks, and what farmers' own field maps can teach us about causal inference.</p>
+        <div class="hero-links">
+          <a href="#">Google Scholar →</a>
+          <a href="#">ResearchGate →</a>
+          <a href="#">Download CV →</a>
+        </div>
+      </div>
+      <!-- Replace headshot.jpg with your photo file (upload it to the same GitHub repo) -->
+      <img class="headshot" src="headshot.jpg" alt="Delide Joseph" onerror="this.style.display='none'">
+    </div>
+  </div>
+
+  <div class="horizon" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap"><div class="horizon-caption">A · B · C — reading the profile, top to bottom</div></div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>My research sits at the intersection of farm financial management and conservation agriculture. Working with Kansas Farm Management Association (KFMA) panel data and field-level precision agriculture records, I study how practices like no-till and cover cropping shape farm profitability, credit access, and resilience to weather and cash-flow shocks. I also contribute to applied policy work on the farm safety net, including analysis of commodity programs and crop insurance under recent legislative changes.</p>
+      <p>I'm advised by Dr. Jennifer Ifft in the Department of Agricultural Economics at Kansas State University. Before K-State, I earned my undergraduate degree at Zamorano University (Escuela Agrícola Panamericana) in Honduras. Before the numbers, I care about the question every producer eventually asks: <em>does this practice pay on my operation?</em> Much of my work is about answering that honestly — separating cost savings from yield effects, correlation from causation, and enthusiasm from evidence.</p>
+      <div class="interests">
+        <div class="interest"><strong>Conservation economics</strong><span>Soil health practices, adoption, and financial performance</span></div>
+        <div class="interest"><strong>Farm finance</strong><span>Debt dynamics, credit access, and cash-flow shocks</span></div>
+        <div class="interest"><strong>Agricultural policy</strong><span>Farm safety net, commodity programs, and crop insurance</span></div>
+        <div class="interest"><strong>Precision agriculture</strong><span>Prescription maps as natural experiments</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <h2>Active Research</h2>
+
+      <div class="entry" style="border-top:none; padding-top:.2rem;">
+        <span class="entry-tag">Conference paper · AAEA 2026, Kansas City</span>
+        <h3>Farm Debt Dynamics Following Cash Flow Shocks</h3>
+        <p class="meta">with Gaku and Jennifer Ifft — KFMA panel, 2013–2020</p>
+        <p class="desc">Uses a rolling z-score shock framework to trace how weather and cash-flow shocks move through farm balance sheets.</p>
+        <p class="finding">Accumulated heat stress significantly reduces current and total loan volume, with the largest credit contraction on high-leverage farms.</p>
+      </div>
+
+      <div class="entry">
+        <span class="entry-tag">Dissertation project · In development</span>
+        <h3>Turning Farmers' Own Prescription Maps into Causal Experiments</h3>
+        <p class="meta">Spatial regression discontinuity using variable-rate seeding boundaries</p>
+        <p class="desc">Prescription zone boundaries create spatial discontinuities where input rates jump while soil characteristics change smoothly — a natural experiment embedded in ordinary farm operations. A proof-of-concept on a 2024 corn field shows a strong first stage and passes falsification tests.</p>
+      </div>
+
+      <div class="entry">
+        <span class="entry-tag">Working paper</span>
+        <h3>Does Conservation Agriculture Increase Resilience to Adverse Weather? Field-Level Evidence</h3>
+        <p class="meta">with Margaret Jodlowski and Jennifer Ifft</p>
+        <p class="desc">Field-level evidence on whether conservation agriculture buffers yields and returns against adverse weather.</p>
+      </div>
+
+      <div class="entry">
+        <span class="entry-tag">Working paper</span>
+        <h3>Financial Constraints and Conservation Adoption</h3>
+        <p class="meta">KFMA panel, 2002–2022 — 3,339 farms</p>
+        <p class="desc">Asks whether financial capacity enables no-till adoption or whether financial benefits flow from it. Agronomic conditions explain adoption far better than balance sheets do.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <h2>Publications</h2>
+
+      <h3 class="subhead">Peer-Reviewed</h3>
+      <div class="pub">
+        <span class="year">2026</span> ·
+        <span class="authors"><strong>Joseph, D.</strong>, Guareschi, C., Ifft, J., Sanderson, M., Hughes, M., &amp; Rice, C.</span>
+        <span class="title">Soil health investment and financial performance of crop farms.</span>
+        <span class="venue">Agricultural Systems, 233, 104601.</span>
+      </div>
+
+      <h3 class="subhead">Extension &amp; Applied Publications</h3>
+      <div class="pub">
+        <span class="year">2025</span> ·
+        <span class="authors"><strong>Joseph, D.</strong>, Ifft, J., Guareschi, C., Sanderson, M., Hughes, M., &amp; Rice, C.</span>
+        <span class="title">Soil Health Practices and Farm Profitability — Insights from Kansas Farms.</span>
+        <span class="venue">AgManager.info, Kansas State University.</span>
+      </div>
+      <div class="pub">
+        <span class="year">2025</span> ·
+        <span class="authors">Ifft, J., <strong>Joseph, D.</strong>, Paudel, A., &amp; Bhattarai, C.</span>
+        <span class="title">Projected ARC, PLC, and Crop Insurance Net Payouts per Acre under OBBBA.</span>
+        <span class="venue">AgManager.info, Kansas State University.</span>
+      </div>
+      <div class="pub">
+        <span class="year">2025</span> ·
+        <span class="authors">Ifft, J., <strong>Joseph, D.</strong>, Paudel, A., &amp; Bhattarai, C.</span>
+        <span class="title">SCO Expected Net Indemnity Payments Map.</span>
+        <span class="venue">AgManager.info, Kansas State University.</span>
+      </div>
+      <div class="pub">
+        <span class="year">2025</span> ·
+        <span class="authors">Bhattarai, C., Ifft, J., Paudel, A., &amp; <strong>Joseph, D.</strong></span>
+        <span class="title">Estimated Net Returns to Supplemental Coverage Option Participation Before and After OBBBA Changes.</span>
+        <span class="venue">AgManager.info, Kansas State University.</span>
+      </div>
+      <div class="pub">
+        <span class="year">2025</span> ·
+        <span class="authors">Ifft, J., <strong>Joseph, D.</strong>, Paudel, A., &amp; Bhattarai, C.</span>
+        <span class="title">Mapping the Farm Safety Net: County Average Commodity Payments and Crop Insurance Net Indemnities, 2014–2023.</span>
+        <span class="venue">AgManager.info, Kansas State University.</span>
+      </div>
+      <div class="pub">
+        <span class="year">2023</span> ·
+        <span class="authors">Reid, R., &amp; <strong>Joseph, D.</strong></span>
+        <span class="title">An Analysis of Agricultural Land Ownership in Kansas.</span>
+        <span class="venue">AgManager.info, Kansas State University.</span>
+      </div>
+
+      <h3 class="subhead">Thesis</h3>
+      <div class="pub">
+        <span class="year">2022</span> ·
+        <span class="authors"><strong>Joseph, D.</strong></span>
+        <span class="title">Desarrollo y validación de una herramienta digital de autodiagnóstico de la competencia estratégica para las empresas.</span>
+        <span class="venue">Zamorano: Escuela Agrícola Panamericana.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="extension">
+    <div class="wrap">
+      <h2>Extension &amp; Outreach</h2>
+      <p><strong>Healthy Soil, Healthy Bottom Line</strong> is an extension program I lead under K-State Regenerative Agriculture, translating peer-reviewed findings on soil health economics into decision tools for producers. Through four in-person delivery events, the program has reached more than 220 Kansas producers, with pre/post evaluation benchmarked against the original KFMA study sample.</p>
+      <p>The program was developed for the 2026 AAEA Extension Competition and continues as an ongoing outreach effort.</p>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="wrap">
+      <h2>Writing</h2>
+      <div class="writing-card">
+        <h3>The Economics of Conservation — on Substack</h3>
+        <p>A research outlet, not a newsletter: I share insights from ongoing empirical work on conservation practices, regenerative agriculture, and precision ag, and think through open questions in public. If you want the analysis behind the headlines on soil health and farm profitability, start here.</p>
+        <p style="margin-top: .8rem;"><a href="#">Read the Substack →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>I'm always glad to talk about farm financial data, conservation economics, precision ag research designs, or potential collaborations.</p>
+      <ul class="plain" style="margin-top: 1rem;">
+        <li>Email: <a href="mailto:your-email@ksu.edu">your-email@ksu.edu</a></li>
+        <li>Department of Agricultural Economics, Kansas State University, Manhattan, KS</li>
+        <li><a href="#">Google Scholar</a> · <a href="#">ResearchGate</a> · <a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 Delide Joseph</span>
+    <span>Built with plain HTML — fast, portable, yours.</span>
+  </div>
+</footer>
+
+</body>
+</html>
